@@ -1,0 +1,39 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "KYCIdentification": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:50463b53-3e7d-4e2b-be13-fc9a603ea420#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "passportID": {
+                        "@id": "polygon-vocab:passportID",
+                        "@type": "xsd:string"
+                    },
+                    "country": {
+                        "@id": "polygon-vocab:country",
+                        "@type": "xsd:string"
+                    },
+                    "birthday": {
+                        "@id": "polygon-vocab:birthday",
+                        "@type": "xsd:integer"
+                    },
+                    "lastName": {
+                        "@id": "polygon-vocab:lastName",
+                        "@type": "xsd:string"
+                    },
+                    "firstName": {
+                        "@id": "polygon-vocab:firstName",
+                        "@type": "xsd:string"
+                    }
+                },
+                "@id": "urn:uuid:749c32e8-df2e-470b-9d87-4c3ee48fc344"
+            }
+        }
+    ]
+}

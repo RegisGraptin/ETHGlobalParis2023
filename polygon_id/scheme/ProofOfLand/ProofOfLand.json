@@ -1,0 +1,133 @@
+{
+    "$metadata": {
+        "uris": {
+            "jsonLdContext": "https://example.com/path/to/file/context.jsonld"
+        },
+        "type": "proofOfLand",
+        "version": "1.0.0"
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Proof of land.",
+    "title": "ProofOfLand",
+    "properties": {
+        "credentialSubject": {
+            "description": "Stores the data of the credential",
+            "title": "Credential subject",
+            "properties": {
+                "information": {
+                    "description": "Additional information on the land.",
+                    "title": "Additional information",
+                    "type": "object"
+                },
+                "city": {
+                    "description": "City of the land",
+                    "title": "City",
+                    "type": "string"
+                },
+                "country": {
+                    "description": "Country of the land",
+                    "title": "Contry",
+                    "type": "string"
+                },
+                "area": {
+                    "description": "Surface area of the land",
+                    "title": "Surface area",
+                    "type": "number"
+                },
+                "longitude": {
+                    "description": "Geographic coordinate of the longitude",
+                    "title": "Longitude",
+                    "type": "number"
+                },
+                "latitude": {
+                    "description": "Geographic coordinate of the land",
+                    "title": "Latitude",
+                    "type": "number"
+                },
+                "id": {
+                    "description": "Stores the DID of the subject that owns the credential",
+                    "title": "Credential subject ID",
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "city",
+                "country",
+                "area",
+                "longitude",
+                "latitude"
+            ],
+            "type": "object"
+        },
+        "@context": {
+            "type": [
+                "string",
+                "array",
+                "object"
+            ]
+        },
+        "expirationDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "issuanceDate": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "issuer": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "format": "uri",
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        "type": {
+            "type": [
+                "string",
+                "array"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "credentialSchema": {
+            "properties": {
+                "id": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "credentialSubject",
+        "@context",
+        "id",
+        "issuanceDate",
+        "issuer",
+        "type",
+        "credentialSchema"
+    ],
+    "type": "object"
+}

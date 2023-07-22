@@ -1,0 +1,42 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "proofOfLand": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:2b739529-df95-4775-89bc-ff8e9d586bca#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "information": {
+                        "@id": "polygon-vocab:information"
+                    },
+                    "city": {
+                        "@id": "polygon-vocab:city",
+                        "@type": "xsd:string"
+                    },
+                    "country": {
+                        "@id": "polygon-vocab:country",
+                        "@type": "xsd:string"
+                    },
+                    "area": {
+                        "@id": "polygon-vocab:area",
+                        "@type": "xsd:double"
+                    },
+                    "longitude": {
+                        "@id": "polygon-vocab:longitude",
+                        "@type": "xsd:double"
+                    },
+                    "latitude": {
+                        "@id": "polygon-vocab:latitude",
+                        "@type": "xsd:double"
+                    }
+                },
+                "@id": "urn:uuid:1d12bcac-359f-4cfa-b13c-b0ddd5dbfa72"
+            }
+        }
+    ]
+}
