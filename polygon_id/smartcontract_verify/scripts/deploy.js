@@ -1,7 +1,7 @@
 async function main() {
   const verifierContract = "ERC20Verifier";
-  const verifierName = "ERC20zkAirdrop";
-  const verifierSymbol = "zkERC20";
+  const verifierName = "Flora";
+  const verifierSymbol = "FLR";
 
 
   const spongePoseidonLib = "0x12d8C87A61dAa6DD31d8196187cFa37d1C647153";
