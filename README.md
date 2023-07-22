@@ -32,7 +32,7 @@ When a user want to register to our app, it will first verify his information. F
 To get the NFT, the user will have to scan the QR Code provided by this front end: `polygon_id/front_kyc_proof` and `npm start`. When scanning the QR Code, the user will be asked to proof that he has done a KYC process and that he is an adult. Then, when those information are validated, the user will have a NFT.
 
 
-## Resources
+### Resources
 
 > Create a scheme data from polygon
 https://issuer-ui.polygonid.me/schemas
@@ -40,3 +40,16 @@ https://issuer-ui.polygonid.me/schemas
 
 > https://0xpolygonid.github.io/tutorials/verifier/on-chain-verification/overview/#design-the-erc20-zk-airdrop-verifier-contract
 > https://github.com/0xPolygonID/tutorial-examples/tree/main/on-chain-verification
+
+
+# Chainlink token transfert
+
+The main process is done on polygon. But for smoothing the user process, we were thinking about transferring the token from polygon to gnosis to directly get the fund from the lend to the mobile phone/bank account of the customer. Also, this can be deploy on other chain to do some lending as the user will maybe not use directly all the money available.
+
+To manage this aspect, we were thinking about using the chainlink technology. Unfortunately, at the moment, Chainlink Cross-Chain Interoperability Protocol (CCIP) on gnosis is not available yet. We were thinking about using chainlink technology when it will become available. Thus, we decided to use CCIP for token transfer from polygon to sepolia. 
+
+For this purpose, we have created a transaction with the code present in `chainlink_transfer`. Here is the transaction hash: `0x7e422a10d9aa9b86d801ca1b61f7099836d6a51068e3c14186d74ee8ca6cdd83` and here is the CCIP message ID: `0x46eaf7a9ba48bc2ef0613a78254d3931ffe02c99e72d607bd50976acc0d615e7`.
+
+> Note: https://ccip.chain.link/msg/0x46eaf7a9ba48bc2ef0613a78254d3931ffe02c99e72d607bd50976acc0d615e7
+
+
