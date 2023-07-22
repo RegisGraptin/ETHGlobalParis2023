@@ -1,47 +1,35 @@
-## CCIP Starter Kit
 
-> **Note**
->
-> _This repository represents an example of using a Chainlink product or service. It is provided to help you understand how to interact with Chainlink’s systems so that you can integrate them into your own. This template is provided "AS IS" without warranties of any kind, has not been audited, and may be missing key checks or error handling to make the usage of the product more clear. Take everything in this repository as an example and not something to be copy pasted into a production ready service._
+# Flora transfer token
 
-This project demonstrates a couple of basic Chainlink CCIP use cases.
+Objective send token from Polygon to Sepolia.
 
-## Prerequisites
-
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- [Current LTS Node.js version](https://nodejs.org/en/about/releases/)
-
-Verify installation by typing:
-
-```shell
-node -v
+```bash
+npx hardhat ccip-token-transfer --source-blockchain polygonMumbai --destination-blockchain ethereumSepolia --receiver 0xc5EF893518208119968B294eE95d341C48c0f2e0 --token-address 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 --amount 10 --gas-limit 0 --fee-token-address 0x326C977E6efc84E512bB9C30f76E30c160eD06FB
 ```
 
-and
 
-```shell
-npm -v
-```
+ℹ️  Checking whether the 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 token is supported by Chainlink CCIP on the polygonMumbai blockchain
+✅ Token 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 is supported by Chainlink CCIP on the polygonMumbai blockchain
 
-## Getting Started
+ℹ️  Attempting to approve Router smart contract (0x70499c328e1e2a3c41108bd3730f6670a44595d1) to spend 1 of 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 tokens on behalf of 0xc5EF893518208119968B294eE95d341C48c0f2e0
 
-1. Install packages
+✅ Approved successfully, transaction hash: 0xbf2d56c3f478f8640d715a37a0b9492531204b630c41904f7604eeead5e060df
 
-```
-npm install
-```
+ℹ️  Calculating CCIP fees...
+ℹ️  Estimated fees (juels): 222733089702423630
+ℹ️  Attempting to approve Router smart contract (0x70499c328e1e2a3c41108bd3730f6670a44595d1) to spend 222733089702423630 of 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 tokens for Chainlink CCIP fees on behalf of 0xc5EF893518208119968B294eE95d341C48c0f2e0
 
-2. Compile contracts
+✅ Approved successfully, transaction hash: 0xa654e08655f9610cf795db38d8e97bbe1bcd802d311d84e8a86c0aec4bc03188
 
-```
-npx hardhat compile
-```
+ℹ️  Attempting to send 1 of 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 tokens from the polygonMumbai blockchain to 0xc5EF893518208119968B294eE95d341C48c0f2e0 address on the ethereumSepolia blockchain
 
-3. Run tests
+✅ Sent successfully! Transaction hash: 0x7e422a10d9aa9b86d801ca1b61f7099836d6a51068e3c14186d74ee8ca6cdd83
+✅ You can now monitor the token transfer status via CCIP Explorer (https://ccip.chain.link) by searching for CCIP Message ID: 0x46eaf7a9ba48bc2ef0613a78254d3931ffe02c99e72d607bd50976acc0d615e7
+✅ Task ccip-token-transfer finished with the execution
 
-```
-TS_TRANSPILE_NODE=1 npx hardhat test
-```
+https://ccip.chain.link/msg/0x46eaf7a9ba48bc2ef0613a78254d3931ffe02c99e72d607bd50976acc0d615e7
+
+
 
 ## What is Chainlink CCIP?
 
@@ -118,32 +106,3 @@ For example, to mint tokens on ethereumSepolia run:
 ```shell
 npx hardhat faucet --network ethereumSepolia --receiver <RECEIVER_ADDRESS>
 ```
-
-# Send from Polygon to Sepolia
-
-npx hardhat ccip-token-transfer --source-blockchain polygonMumbai --destination-blockchain ethereumSepolia --receiver 0xc5EF893518208119968B294eE95d341C48c0f2e0 --token-address 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 --amount 1 --gas-limit 0 --fee-token-address 0x326C977E6efc84E512bB9C30f76E30c160eD06FB
-
-=> 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40
-
-
-ℹ️  Checking whether the 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 token is supported by Chainlink CCIP on the polygonMumbai blockchain
-✅ Token 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 is supported by Chainlink CCIP on the polygonMumbai blockchain
-
-ℹ️  Attempting to approve Router smart contract (0x70499c328e1e2a3c41108bd3730f6670a44595d1) to spend 1 of 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 tokens on behalf of 0xc5EF893518208119968B294eE95d341C48c0f2e0
-
-✅ Approved successfully, transaction hash: 0xbf2d56c3f478f8640d715a37a0b9492531204b630c41904f7604eeead5e060df
-
-ℹ️  Calculating CCIP fees...
-ℹ️  Estimated fees (juels): 222733089702423630
-ℹ️  Attempting to approve Router smart contract (0x70499c328e1e2a3c41108bd3730f6670a44595d1) to spend 222733089702423630 of 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 tokens for Chainlink CCIP fees on behalf of 0xc5EF893518208119968B294eE95d341C48c0f2e0
-
-✅ Approved successfully, transaction hash: 0xa654e08655f9610cf795db38d8e97bbe1bcd802d311d84e8a86c0aec4bc03188
-
-ℹ️  Attempting to send 1 of 0xf1E3A5842EeEF51F2967b3F05D45DD4f4205FF40 tokens from the polygonMumbai blockchain to 0xc5EF893518208119968B294eE95d341C48c0f2e0 address on the ethereumSepolia blockchain
-
-✅ Sent successfully! Transaction hash: 0x7e422a10d9aa9b86d801ca1b61f7099836d6a51068e3c14186d74ee8ca6cdd83
-✅ You can now monitor the token transfer status via CCIP Explorer (https://ccip.chain.link) by searching for CCIP Message ID: 0x46eaf7a9ba48bc2ef0613a78254d3931ffe02c99e72d607bd50976acc0d615e7
-✅ Task ccip-token-transfer finished with the execution
-
-https://ccip.chain.link/msg/0x46eaf7a9ba48bc2ef0613a78254d3931ffe02c99e72d607bd50976acc0d615e7
-
