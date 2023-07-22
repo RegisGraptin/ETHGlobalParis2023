@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.0.4",
     "@nomiclabs/hardhat-ethers": "^2.2.3",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.7.2",

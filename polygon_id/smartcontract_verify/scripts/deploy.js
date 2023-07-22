@@ -1,5 +1,6 @@
 async function main() {
   const verifierContract = "ERC20Verifier";
+  
   const verifierName = "Flora";
   const verifierSymbol = "FLR";
 
