@@ -1,4 +1,4 @@
-#Biconomy implementation for Flora
+# Biconomy implementation for Flora
 We are using 2 methods from Biconomy to help the farmers get into the crypto space
 ## Web2 Auth
 With the social web2 auth, the new users don't need to posses any web3 knowledge. They can easily create a new EOA account by using Biconomy SDK to onboard themselves for web3. 
