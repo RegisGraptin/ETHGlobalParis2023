@@ -1,8 +1,6 @@
 require('@nomiclabs/hardhat-waffle');
 require('dotenv').config();
 require('@openzeppelin/hardhat-upgrades');
-require("@nomicfoundation/hardhat-verify");
-
 module.exports = {
   // solidity: "0.8.17",
   // networks: {
