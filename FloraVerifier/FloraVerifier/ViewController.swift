@@ -54,7 +54,6 @@ class ViewController: UIViewController {
     
     func loadMessages() {
         
-        // Address: 0x49F67f90Fe9a3670Ef15726Ab606D6f715DAf08C
         let privateKeyString = KeyManager.getKey()!
         
         do {
@@ -76,12 +75,6 @@ class ViewController: UIViewController {
                         print(error)
                     }
                 }
-                
-//                let chatMessages = ["Sending you a request for 800$", "My cocoa crop died" , "I will pay it back in one month max"]
-//
-//                for sendMessage in chatMessages {
-//                    try await conversation.send(content: sendMessage)
-//                }
             }
         } catch {
             print("Error occurred: \(error)")
