@@ -67,7 +67,6 @@ For future use case, we were thinking about a reputation system as a hall of fam
 
 # ZK Bob
 
-Contract address we want to interact with:
-> 0x72894b24c50d68bffdd75b119a7e02b140f8cc1f
+When we are doing a proposal with Aragon, we have the possibility to execute a smart contract function when the proposal has been accepted. One interesting point here is that we can use ZK Bob deposit function to transfert the funds and to be able to keep privacy inside of the loop. This function can be found in the proxy implementation at the following address: `0x72894b24c50d68bffdd75b119a7e02b140f8cc1f`.
 
 
