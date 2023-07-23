@@ -52,4 +52,22 @@ For this purpose, we have created a transaction with the code present in `chainl
 
 > Note: https://ccip.chain.link/msg/0x46eaf7a9ba48bc2ef0613a78254d3931ffe02c99e72d607bd50976acc0d615e7
 
+# Aragon 
+
+We created a DAO. The first one was by using on the Aragon website, allowing us to create a DAO on polygon mombai testnet. Here is the link of this DAO:
+
+> https://app.aragon.org/#/daos/mumbai/0x1d7a3f5e7a6d0f4cd62175c3f64e82edec73946c/dashboard
+
+The DAO will act as the tresory keeper. Each farmer, after validation of the KYC and the Proof of Land, will be able to create a proposal to access a lending. People of the DAO will then analyse the case and approve or not the lending. This approach is the first one and was simple to implement. But we wanted to propose more customization approach for a proposal. Thus, we decided to implement additional plugins for the DAO. 
+
+The first idea that we decided to implement is a NFT minting for the farmer. This will allow the creation of a reputation system that will allow us to see the number of loans accepted for this person. This implementation can be found `dao_lending/contracts/LendPluginSetup.sol`. We also managed the deployement of this smartcontract and the publishing of this plugin with two typescript files.
+
+For future use case, we were thinking about a reputation system as a hall of fame for the contributors of the DAO. This will provide incentivize for people to participate in the voting phase for accepting or not a proposal. Also, regarding the DAO activity, another use case could be to have some metrics about the proposal that can be interesting or not.
+
+
+# ZK Bob
+
+Contract address we want to interact with:
+> 0x72894b24c50d68bffdd75b119a7e02b140f8cc1f
+
 
