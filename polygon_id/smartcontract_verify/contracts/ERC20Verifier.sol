@@ -11,23 +11,13 @@ contract ERC20Verifier is ERC20, ZKPVerifier {
 
     mapping(uint256 => address) public idToAddress;
     mapping(address => uint256) public addressToId;
-
+    mapping(address => bool) public hasSentRequest;
+    
     uint256 public TOKEN_AMOUNT_PER_ID = 1;
-    uint256 public increments = 0;
 
     constructor(string memory name_, string memory symbol_)
     ERC20(name_, symbol_)
     {}
-
-    function test_1() public returns(uint256) {
-        increments += 1;
-        return increments;
-    }
-
-    function test_2() public returns(uint256) {
-        increments += 2;
-        return increments;
-    }
 
     function _beforeProofSubmit(
         uint64, /* requestId */
@@ -75,4 +65,12 @@ contract ERC20Verifier is ERC20, ZKPVerifier {
             "only identities who provided proof are allowed to receive tokens"
         );
     }
+
+    function requestLoan() public returns(bool){
+        hasSentRequest[msg.sender] = true;
+
+        return true;
+    }
+
+
 }
