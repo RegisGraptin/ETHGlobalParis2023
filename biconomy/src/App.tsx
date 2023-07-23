@@ -74,11 +74,11 @@ const biconomySmartAccountConfig: BiconomySmartAccountConfig = {
 
   const smartAccount = await createAccount();
 
-  const incrementTx = new ethers.utils.Interface(["function test_1()"]);
-    const data = incrementTx.encodeFunctionData("test_1");
+  const incrementTx = new ethers.utils.Interface(["function requestLoan()"]);
+    const data = incrementTx.encodeFunctionData("requestLoan");
 
   const transaction = {
-    to: '0x11d76ad2b7520e262e379f752af3ceb77b36d0c4', // smart contract 
+    to: '0xc49e36e3bd5239a6587236b92f273d7b934a05be', // smart contract 
     data: data,
     // value: ethers.utils.parseEther('0.01'),
   }
@@ -112,9 +112,9 @@ const biconomySmartAccountConfig: BiconomySmartAccountConfig = {
       <img src={farm} alt="" />
       <div className='text-black font-bold text-3xl py-2 px-4 flex justify-center'>Flora</div>
       <div style={{textAlign: "center"}} className='text-black font-bold py-2 px-4 -mt-3 '>Where farmers can borrow crypto assets to grow their farm </div>
-      <button className='border-2 rounded-xl font-bold py-2 px-4 bg-green-400 hover:bg-white hover:text-black transition-all duration-200 ml-3 mr-3' onClick={() => socialLogin()}>Create Web3 account</button>
+      <button className='border-2 rounded-xl font-bold py-2 px-4 bg-green-400 hover:bg-white hover:text-black transition-all duration-200 ml-3 mr-3' onClick={() => socialLogin()}>Login</button>
       {/* <button className='border-2 rounded-xl font-bold py-2 px-4 hover:bg-black hover:text-white transition-all duration-200' onClick={() => createAccount()}>Create Smart Account</button> */}
-      <button className='border-2 rounded-xl font-bold py-2 px-4 bg-green-400 hover:bg-white hover:text-black transition-all duration-200 ml-3 mr-3' onClick={() => createTransaction()}>Create Paymaster Transaction</button>
+      <button className='border-2 rounded-xl font-bold py-2 px-4 bg-green-400 hover:bg-white hover:text-black transition-all duration-200 ml-3 mr-3' onClick={() => createTransaction()}>Submit Loan Request</button>
     </div>
   );
 }
