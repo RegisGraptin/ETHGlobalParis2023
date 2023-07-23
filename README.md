@@ -1,4 +1,9 @@
-# ETHGlobalParis2023
+# Flora App
+
+
+Flora is a micro-lending app for rural smallholders without bank accounts to get short term loans without providing predatory collaterals.
+
+Built at EthGlobal Paris 2023: https://ethglobal.com/showcase/flora-app-nqkw0
 
 
 # Polygon ID Connect
@@ -13,7 +18,7 @@ https://schema-builder.polygonid.me/schemas/b0d3c4d0-85fd-4d83-a23a-17ff263290d3
 https://ipfs.io/ipfs/QmcYsCGGxwahDRGbJx3bnCbuzkyVq8wKuQrXUzRsk5wZiK
 ipfs://QmcYsCGGxwahDRGbJx3bnCbuzkyVq8wKuQrXUzRsk5wZiK
 
-- Proof of land
+- Proof of land asset
 https://schema-builder.polygonid.me/schemas/d14ef92e-4b38-435a-89ca-a2656a833916
 https://ipfs.io/ipfs/QmdR4FWxM1k3HrY7kfzwcc6SqZL4pctTLKwgzh2wtiXCFQ
 ipfs://QmdR4FWxM1k3HrY7kfzwcc6SqZL4pctTLKwgzh2wtiXCFQ
@@ -42,7 +47,7 @@ https://issuer-ui.polygonid.me/schemas
 > https://github.com/0xPolygonID/tutorial-examples/tree/main/on-chain-verification
 
 
-# Chainlink token transfert
+# Chainlink token transfer
 
 The main process is done on polygon. But for smoothing the user process, we were thinking about transferring the token from polygon to gnosis to directly get the fund from the lend to the mobile phone/bank account of the customer. Also, this can be deploy on other chain to do some lending as the user will maybe not use directly all the money available.
 
